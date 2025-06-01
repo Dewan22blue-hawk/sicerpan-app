@@ -63,8 +63,6 @@ Ikuti langkah-langkah sederhana ini untuk menjalankan aplikasi di lingkungan lok
         ```
         VITE_MAPTILER_API_KEY=YOUR_ACTUAL_MAPTILER_API_KEY
         ```
-    * Tambahkan juga kunci ini di file `STUDENT.txt` Anda untuk *submission*.
-
 4.  **Siapkan Aset PWA (Ikon & Screenshot):**
     Pastikan semua aset gambar berikut ada di lokasi fisik yang benar, sesuai dengan yang dikonfigurasi di `vite.config.js`:
     * `src/public/favicon.ico`
@@ -97,32 +95,72 @@ Ikuti langkah-langkah sederhana ini untuk menjalankan aplikasi di lingkungan lok
 
 ## Struktur Proyek 📂
 
-dicoding-story-app/
-├── node_modules/
-├── src/
-│   ├── api/                 # Interaksi dengan API
-│   │   └── story-api.js
-│   ├── components/          # Komponen UI
-│   ├── pages/               # Halaman aplikasi
-│   │   ├── auth/
-│   │   ├── favorites/       # Halaman cerita favorit
-│   │   ├── stories/
-│   │   └── NotFound.js
-│   ├── presenters/          # Logika bisnis
-│   ├── public/              # Aset publik (ikon, screenshot, favicon)
-│   │   ├── icons/
-│   │   └── screenshots/
-│   ├── utils/               # Utilitas (Router, IndexedDB, Notifikasi, Kamera)
-│   │   ├── StoryDb.js
-│   │   └── NotificationHelper.js
-│   ├── styles/
-│   ├── main.js              # Entry point JS
-│   ├── App.js               # Struktur aplikasi utama
-│   └── config.js            # Konfigurasi aplikasi
-├── .env                     # Environment variables
-├── vite.config.js           # Konfigurasi Vite & PWA
-├── package.json
-└── STUDENT.txt              # API Keys untuk Submission
+Anda benar! Preview seperti itu menunjukkan bahwa format Markdown untuk struktur pohon folder tidak diinterpretasikan dengan benar oleh viewer Markdown Anda. Itu terlihat seperti satu baris panjang atau daftar item yang tidak terindentasi dengan benar.
+
+Ini biasanya terjadi karena dua alasan:
+
+Anda tidak menyertakan tiga backtick (```) di awal dan akhir blok struktur folder.
+Viewer Markdown yang Anda gunakan mungkin tidak mendukung indentasi yang terlalu dalam atau format daftar bersarang tanpa blok kode.
+Perbaikan (Pastikan Ada Blok Kode Markdown)
+Mohon pastikan Anda menyalin seluruh bagian ini, termasuk tiga backtick di awal dan di akhir. Ini akan memberitahu Markdown renderer bahwa itu adalah blok kode, dan akan mempertahankan semua indentasi serta formatnya.
+
+Markdown
+
+## Struktur Proyek 📂
+
+📂 Struktur Proyek  
+dicoding-story-app/  
+├── node_modules/  
+├── public/                     # Lokasi aset statis (akan dicopy ke dist/ saat build)  
+│   ├── index.html              # File HTML utama (entry point)  
+│   ├── favicon.ico             # Favicon situs  
+│   ├── icons/                  # Folder untuk ikon PWA & shortcut  
+│   │   ├── add-story-icon.png  
+│   │   ├── apple-touch-icon.png  
+│   │   ├── pwa-192x192.png  
+│   │   └── pwa-512x512.png  
+│   └── screenshots/            # Folder screenshot PWA  
+│       ├── desktop-screenshot.png  
+│       └── mobile-screenshot.png  
+├── src/                        # Kode sumber aplikasi JavaScript, CSS  
+│   ├── api/                    # Modul untuk interaksi dengan API  
+│   │   └── story-api.js  
+│   ├── components/             # Komponen UI yang dapat digunakan kembali  
+│   │   ├── StoryCard.js  
+│   │   ├── Header.js  
+│   │   ├── Footer.js  
+│   │   └── Spinner.js  
+│   ├── pages/                  # Halaman-halaman aplikasi  
+│   │   ├── auth/               # Halaman autentikasi  
+│   │   │   ├── Login.js  
+│   │   │   └── Register.js  
+│   │   ├── favorites/          # Halaman cerita favorit (IndexedDB)  
+│   │   │   └── FavoriteStories.js  
+│   │   ├── stories/            # Halaman cerita utama  
+│   │   │   ├── Stories.js  
+│   │   │   ├── AddStory.js  
+│   │   │   └── DetailStory.js  
+│   │   └── NotFound.js         # Halaman 404 Not Found  
+│   ├── presenters/             # Logika bisnis (Presenter)  
+│   │   ├── AuthPresenter.js  
+│   │   ├── StoriesPresenter.js  
+│   │   └── AddStoryPresenter.js  
+│   ├── utils/                  # Utilitas (Router, IndexedDB, Notifikasi, Kamera)  
+│   │   ├── Router.js  
+│   │   ├── AuthHelper.js  
+│   │   ├── NotificationHelper.js  
+│   │   ├── CameraHelper.js  
+│   │   └── StoryDb.js  
+│   ├── styles/                 # File CSS  
+│   │   ├── global.css  
+│   │   └── components.css  
+│   ├── main.js                 # Entry point JS utama  
+│   ├── App.js                  # Struktur aplikasi utama  
+│   └── config.js               # Konfigurasi aplikasi  
+├── .env                        # Environment variables  
+├── vite.config.js              # Konfigurasi Vite & PWA  
+├── package.json                # Daftar dependensi  
+└── STUDENT.txt                 # API Keys untuk Submission  
 
 ## Dependensi Utama 📦
 
@@ -140,4 +178,4 @@ Proyek ini dibuat sebagai bagian dari program Dicoding. Terima kasih kepada tim 
 
 ## Lisensi 📄
 
-[Opsional: Tambahkan informasi lisensi di sini, misalnya MIT License]
+Dewan22blue-hawk©2025
